@@ -19,6 +19,9 @@ class FileListSerializer(serializers.Serializer):
     
     
     def zip_file(self, folder):
+        
+        # shutil.make_archive('outputfile location' , 'zip', 'directrory name')
+        
         shutil.make_archive(f'media/{folder}' , 'zip', f'media/{folder}')
     
     def create(self, validated_data):
